@@ -1,0 +1,262 @@
+/******* talipapa dashboard all css ********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* default css */
+
+/* colors */
+html {
+    --white: #ffffff;
+    --bg: #f6f7f9;
+    --secondary-bg: #e9ebee;
+}
+
+/* width */
+.scrollbar_one::-webkit-scrollbar {
+    width: 3px;
+}
+  
+/* Track */
+.scrollbar_one::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+}
+   
+/* Handle */
+.scrollbar_one::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+/* Handle on hover */
+.scrollbar_one::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* end default css */
+
+/* ====== header style css ========*/
+.dashboard_header{
+    background-color: #ffffff;
+    padding: 7px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.075);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+}
+.dh_start{
+    display: flex;
+    align-items: center;
+}
+
+.dh_menu_toggle{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.dh_menu_toggle:hover{
+    background-color: var(--secondary-bg);
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+.dh_badge{
+    padding: 2px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.dh_badge_colored{
+    background-color: hsl(16deg 90% 53%);
+    color: #ffffff;
+    font-size: 13px;
+    padding: 3px 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.dh_badge span{
+    margin: 2px 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dh_middle{
+    display: flex;
+}
+.dh_dropdown_wraper{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    border-right: 2px solid rgba(0,0,0,0.075);
+}
+.dh_dropdown_wraper.no_border{
+    border-right: 0px solid transparent;
+}
+.dh_dropdown_wraper svg{    
+    font-size: 18px;
+    margin-top: 2px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.dh_dropdown_wraper span{
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+@media(max-width: 1100px){
+   .dh_badge_wraper{
+       display: none;
+   }
+}
+@media(max-width: 900px){
+    .dh_badge_wraper{
+        display: none;
+    }
+    .dh_middle .dh_dropdown_wraper:nth-child(1){
+        display: none;
+    }
+    .dh_middle .dh_dropdown_wraper:nth-child(2){
+        display: none;
+    }
+    .dh_middle .dh_dropdown_wraper:nth-child(3){
+        display: none;
+    }
+ }
+
+ @media(max-width: 600px){
+    .dh_badge_wraper{
+        display: none;
+    }
+    .dh_middle{
+        display: none;
+    }
+ }
+
+/* ====== End header style css ======= */
+
+/* ====== Sidebar style css ======== */
+.dh_sidebar{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    max-width: 280px;
+    height: 0px;
+    overflow: hidden;
+    background-color: #f6f7f9;
+    border-right: 1px solid rgba(0,0,0,0.075);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+}
+.dh_sidebar.show{
+    height: 90vh;
+    transition: 0.3s ease-in-out;
+}
+.dh_sidebar_title{
+    padding: 10px;
+    background-color: #e1e8f0;
+    color: #455066;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.dh_sidebar_title.active{
+    color: #5842df;
+}
+.dh_sidebar_title svg{
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.dhs_menu_wraper{
+    overflow: auto;
+}
+.dhs_menu{
+    padding: 10px;
+    color: #434e62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.dhs_menu > div svg{
+    font-size: 20px;
+    color: #434e62;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+.dhs_menu .dsh_toggle svg{
+    transition: 0.3s ease-in-out;
+    font-size: 25px;
+}
+.dhs_menu.active .dsh_toggle svg{
+    transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
+}
+.dhs_menu span{
+    font-size: 18px;
+}
+.dhs_menu_lists{
+    color: #434e62;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+.dhs_menu_lists.active{
+    max-height: 1000px;
+    transition: 0.5s ease-in-out;
+}
+.dhs_list_item{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    align-items: center;
+    padding-left: 37px;
+    cursor: pointer;
+}
+.dhs_list_item:hover{
+    color: #5842df;
+}
+.dhs_list_item.sub{
+    padding-left: 55px;
+}
+.dhs_list_item svg{
+    font-size: 22px;
+}
+
+/* ====== End sidebar style css ====== */
+
+/* ======== dashboard page css ======== */
+.dashboard_wraper{
+    background-color: var(--white);
+    height: auto;
+    height: 100vh;
+    max-height: auto;
+}
+/* ======== End dashboard page css ====== */
+
+/* ======== Order page css ========= */
+.pending_order_wraper{
+    width: 100%;
+    height: auto;
+    background-color: var(--bg);
+    padding: 20px;
+}
+
+/* ======== End order page css ====== */
