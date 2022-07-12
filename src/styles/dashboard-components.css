@@ -164,6 +164,7 @@
     align-items: center;
     padding: 6px 15px;
     border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 .orf_filter svg{
     margin-right: 7px;
@@ -264,3 +265,154 @@
 }
 
 /* end pending table css */
+
+/* filter box design css */
+
+.order_filterbox_wraper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_filterbox{
+    width: 95%;
+    height: 95%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+.ofi_header{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 20px;
+}
+.ofi_header h4{
+    font-size: 20px;
+}
+.ofi_close{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.ofi_close:hover{
+    background-color: var(--bg);
+    transition: 0.2s ease-in-out;
+    border: 1px solid rgba(0,0,0,0.075);
+}
+
+.ofi_action{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+}
+.ofia_btn{
+    padding: 7px 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+.ofia_btn:hover{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.ofia_btn.confirm{
+    background-color: #5a23ff;
+    color: #ffffff;
+}
+.ofia_btn.confirm:hover{
+    border: 1px solid transparent;
+    background-color: #4b14dc;
+}
+
+.ofi_filter_wraper{
+    position: relative;
+}
+.ofi_filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+}
+.ofi_filter_item{
+    padding: 10px;
+}
+
+.ofi_filter_item input{
+    width: 100%!important;
+    padding: 7px 15px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: rgb(55 65 81);
+}
+
+
+.ofc_selected{
+    padding: 7px 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.ofc_selected:hover{
+    background-color: var(--bg);
+    transition: 0.2s ease-in-out;
+}
+.ofc_box{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 80vw;
+    height: 50vh;
+    background-color: #ffffff;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+}
+.ofc_box_item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-right: 2px solid rgba(0,0,0,0.1);
+}
+.ofcb_link_item{
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ofcb_link_item:hover{
+    background-color: var(--bg);
+    cursor: pointer;
+}
+.ofcb_link_item.active{
+    background-color: #f4edfd;
+    font-weight: bold;
+}
+
+
+
+/* end filter box design css */

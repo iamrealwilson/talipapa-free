@@ -17,6 +17,7 @@ return(
    <props.Icon/>
    <span>{props.name}</span>
  </div>
+
  <div className="dsh_toggle">
  <KeyboardArrowDownOutlinedIcon/>
  </div>
@@ -27,7 +28,9 @@ return(
       return ( 
       <>  
       {menu.type==='link'?
-      <div className="dhs_list_item" key={menu.name}>{menu.name}</div>:
+      <Link to={menu.to}>
+      <div className="dhs_list_item" key={menu.name}>{menu.name}</div>
+      </Link>:
       <div className="dhs_sub_menu" 
       onClick={e=>SubOpned?setSubOpned(false):setSubOpned(true)}>
         <div className="dhs_list_item" key={menu.name}>{menu.name} 

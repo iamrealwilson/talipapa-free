@@ -4,7 +4,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
-const StoredTable=()=>{
+const AbnormalTable=()=>{
 
 return(
 <>
@@ -22,25 +22,13 @@ return(
                     </div>
                 </th>
                 <th scope="col" className="px-6 py-3">
+                    Failed Reason
+                </th>
+                <th scope="col" className="px-6 py-3">
                     Orders
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Product Name
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Variant/SKU
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Warehouse/Outbound Order
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    QTY
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Total
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Action
+                    Store Name
                 </th>
             </tr>
         </thead>
@@ -57,31 +45,10 @@ return(
                     Apple Iphone 13
                 </th>
                 <td className="px-6 py-4">
-                    Black
+                    10 pices
                 </td>
                 <td className="px-6 py-4">
-                    Mobile
-                </td>
-                <td className="px-6 py-4">
-                    $1299
-                </td>
-                <td className="px-6 py-4">
-                    7
-                </td>
-                <td className="px-6 py-4">
-                    15
-                </td>
-                <td className="px-6 py-4">
-                <button type="button" 
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                    <VisibilityIcon/>
-                </button>
-                <button className="h-10 p-2 m-2 text-green-100 transition-colors duration-150 bg-green-700 rounded-lg focus:shadow-outline hover:bg-green-800">
-                    <EditIcon/>
-                </button>
-                <button type="button" className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
-                    <DeleteForeverIcon/>
-                </button>
+                    Mobile MArt
                 </td>
             </tr>
 
@@ -90,9 +57,7 @@ return(
 </div>
 </div>
 
-
-
 </>
 )
 }
-export default StoredTable
+export default AbnormalTable

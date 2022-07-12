@@ -28,6 +28,7 @@ return(
       {
        type:"link",
        name:"All Orders",
+       to: "/orders/landing"
       },
       {
         type:"menu",
@@ -43,14 +44,17 @@ return(
       {
         type:"link",
         name:"Abnormal Order",
+        to: "/order/abnormal"
       },
       {
         type:"link",
         name:"Operation Record",
+        to: "/"
       },
       {
         type:"link",
         name:"Orders Settings",
+        to: "/"
       }
     ]}
   />
