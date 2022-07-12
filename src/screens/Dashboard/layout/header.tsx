@@ -24,26 +24,10 @@ return(
      {props.pagename.length > 15?props.pagename.substr(0,15) + "...":props.pagename}
    </div>
 
-   <div className="dh_badge_wraper flex px-2">
-       <NavBadge
-        name="OPEN"
-        title="Ginee WMS"
-       />
-       <NavBadge
-        name="Free"
-        title="Data Scraper Extension"
-       />
-   </div>
 
    </div>
 
   <div className="dh_middle">
-     <div className="dh_dropdown_wraper text-gray-600">
-       <ContactSupportIcon/> <span>Free Trial</span>
-     </div> 
-     <div className="dh_dropdown_wraper text-gray-600">
-       <ContactSupportIcon/> <span>Sync</span>
-     </div> 
      <div className="dh_dropdown_wraper text-gray-600">
        <ContactSupportIcon/> <span>Help Center</span>
      </div> 
