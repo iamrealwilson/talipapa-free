@@ -54,7 +54,7 @@ return(
       {
         type:"link",
         name:"Orders Settings",
-        to: "/"
+        to: "/order/settings"
       }
     ]}
   />
