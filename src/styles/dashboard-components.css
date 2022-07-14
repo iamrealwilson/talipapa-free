@@ -417,4 +417,225 @@
 
 /* end filter box design css */
 
+/* order settings design css */
+
+.binfo_setting_input{
+    width: 80%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    margin-top: 7px;
+}
+.binfo_setting_input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    font-size: 15px;
+    color: #333;
+}
+@media(max-width: 1000px){
+    .binfo_setting_input{
+        width: 100%;
+    }
+}
+
+.binfo_setting_select{
+    width: 80%;
+}
+@media(max-width: 1000px){
+    .binfo_setting_select{
+        width: 100%;
+    }
+}
+.binfo_setting_textarea textarea{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 7px 10px;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+}
+.editorClassName{
+    padding: 0px 15px;
+}
+.binfo_settings_bottom{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+}
+.binfo_action_btn{
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 14px;
+    padding: 7px 15px;
+    color: #333;
+    border-radius: 3px;
+}
+.binfo_action_btn:hover{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.binfo_action_btn.save{
+    background-color: #5a23ff;
+    transition: 0.2s ease-in-out;
+    color: #f1f1f1;
+}
+.binfo_action_btn:hover.save{
+    background-color: #4b14dc;
+    transition: 0.2s ease-in-out;
+    color: #f1f1f1;
+}
+
+/* end order settings design */
+
+/* master product warning */
+.mpwarning_wraper{
+    padding: 15px 20px;
+}
+.mpwarning{
+    padding: 10px;
+    background-color: #f1f1fd;
+    border-top: 4px solid #5c26e9;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+}
+.mpwarning svg{
+    font-size: 18px;
+    color: #5a23ff;
+}
+.mp_select_input{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    background-color: var(--white);
+}
+.mp_select_input select{
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background-color: transparent;
+    color: #333;
+}
+.mp_select_input input{
+    width: 100%;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: var(--white);
+}
+.mp_border_right{
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+.mp_input_searchicon{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    background-color: var(--white);
+}
+.mp_input_searchicon svg{
+    font-size: 18px;
+}
+.mp_wraper{
+    background-color: var(--bg);
+    padding-bottom: 10px;
+}
+.mp_grid_wraper{
+    display: flex;
+}
+.mpi_btn{
+    display: flex;
+    align-items: center;
+    height: 36px;
+    background-color: #5a23ff;
+    padding: 0px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #ffffff;
+}
+.mpi_btn.lite{
+    display: flex;
+    align-items: center;
+    height: 36px;
+    background-color: #ffffff;
+    padding: 0px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.mpi_btn.lite svg{
+    font-size: 18px;
+}
+.small_svg svg{
+    font-size: 16px;
+}
+.mp_info_txt{
+    display: flex;
+    align-items: center;
+}
+.mp_info_txt span{
+    font-size: 14px;
+    color: #555;
+    margin-right: 5px;
+}
+.mp_info_txt span svg{
+    font-size: 18px;
+    color: #b1becd;
+}
+.mp_product_table{
+    height: auto;
+}
+.mppt_header{
+    padding: 0px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+}
+.mppt_tab_btn{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+}
+.mppt_tab_btn span{
+    font-size: 14px;
+    margin-right: 10px;
+    color: #555;
+}
+.mppt_btn_sub{
+    width: fit-content;
+    min-width: 30px;
+    text-align: center;
+    height: fit-content;
+    padding: 1px 5px;
+    font-size: 13px;
+    background-color: var(--bg);
+    border-radius: 5px;
+    color: #555;
+}
+.mppt_tab_btn.active{
+    border-bottom: 3px solid #5a23ff;
+}
+.mppt_tab_btn.active span{
+    color: #333;
+}
+.mppt_tab_btn.active .mppt_btn_sub{
+    background-color: #5a23ff;
+    color: #ffffff;
+}
+
+/* end master product warning */
+
 

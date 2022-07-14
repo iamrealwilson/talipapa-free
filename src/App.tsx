@@ -13,6 +13,7 @@ import StoredOrder from "./screens/Dashboard/order/order-stored";
 import AbnormalOrder from "./screens/Dashboard/order/order-abnormal";
 import OrderLanding from "./screens/Dashboard/order/orders-landing";
 import OrderSetting from "./screens/Dashboard/order/order-settings";
+import MasterProductList from "./screens/Dashboard/MasterProduct/MasterProductList";
 
 const App = (): ReactElement => {
 return (
@@ -29,6 +30,7 @@ return (
    <Route path="/order/stored" element={<StoredOrder/>} ></Route>
    <Route path="/order/abnormal" element={<AbnormalOrder/>}></Route>
    <Route path="/order/settings" element={<OrderSetting/>}></Route>
+   <Route path="/master/product-list" element={<MasterProductList/>} />
   </Routes>
 </BrowserRouter>
 </>

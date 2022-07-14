@@ -7,6 +7,7 @@ import CostInfo from "./settings/CostInfo";
 import DeliverySetting from "./settings/Delivery";
 import ProductInfoSetting from "./settings/ProductInfo";
 import MediaSetting from "./settings/MediaSetting";
+import BasicInfo from "./settings/BasicInfo";
 
 const OrderSetting=()=>{
 const [cuBox,setCuBox] = useState('')
@@ -29,9 +30,7 @@ return(
     </div>  
     
     <div className={`h-0 overflow-hidden transition-all duration-200 ${cuBox==='binfo'?'h-auto':''}`}>
-      <div className="p-2">
-
-      </div>
+      <BasicInfo/>
     </div>
   </div>
 

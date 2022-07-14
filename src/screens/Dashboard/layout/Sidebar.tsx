@@ -62,7 +62,9 @@ return(
  <DHMenu
     Icon = {ShoppingBagOutlinedIcon}
     name="Master Product"
-    menus={[]}
+    menus={[
+      {type:"link",name:"Master Product List",to:"/master/product-list"}
+    ]}
   />
 
   <DHMenu
