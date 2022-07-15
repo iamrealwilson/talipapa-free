@@ -50,11 +50,6 @@ return(
         type:"link",
         name:"Operation Record",
         to: "/"
-      },
-      {
-        type:"link",
-        name:"Orders Settings",
-        to: "/order/settings"
       }
     ]}
   />
@@ -63,7 +58,13 @@ return(
     Icon = {ShoppingBagOutlinedIcon}
     name="Master Product"
     menus={[
-      {type:"link",name:"Master Product List",to:"/master/product-list"}
+      {type:"link",name:"Master Product List",to:"/master/product-list"},
+      {type:"link",name:"Price Management",to:"/master/price-management"},
+      {
+        type:"link",
+        name:"Product Settings",
+        to: "/product/settings"
+      }
     ]}
   />
 
@@ -99,7 +100,21 @@ return(
   <DHMenu
     Icon = {BarChartOutlinedIcon}
     name="Reports"
-    menus={[]}
+    menus={[
+      {
+        type:"menu",
+        name:"Sales Report",
+        links: [
+          {name:"Order Report",to:"/report/order-report"},
+          {name:"Master Product Sales",to:"/"},
+          {name:"Master Product Activity",to:"/"},
+          {name:"Product Sales",to:"/report/product-sales"},
+          {name:"Variants Sales",to:""},
+          {name:"Channel Sales",to:"/"},
+          {name:"Store Sales",to:"/report/store-sales"}
+        ]
+      },
+    ]}
   />
 
   <DHMenu

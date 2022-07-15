@@ -26,7 +26,7 @@ return(
   {
     props.menus.map((menu:any):any=>{
       return ( 
-      <>  
+      <div key={menu.name}>  
       {menu.type==='link'?
       <Link to={menu.to}>
       <div className="dhs_list_item" key={menu.name}>{menu.name}</div>
@@ -38,7 +38,7 @@ return(
         </div>
         <div className={`dhs_menu_lists ${SubOpned?'active':''}`}
         style={{
-          height: SubOpned?"200px":"0px",
+          maxHeight: SubOpned?"500px":"0px",
           transition: "0.3s ease-in-out"
         }}
         >
@@ -53,7 +53,7 @@ return(
         </div>
       </div>
       }
-      </>
+      </div>
       )
     })
   }

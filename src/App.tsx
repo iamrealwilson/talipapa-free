@@ -14,6 +14,9 @@ import AbnormalOrder from "./screens/Dashboard/order/order-abnormal";
 import OrderLanding from "./screens/Dashboard/order/orders-landing";
 import OrderSetting from "./screens/Dashboard/order/order-settings";
 import MasterProductList from "./screens/Dashboard/MasterProduct/MasterProductList";
+import MPPriceManagement from "./screens/Dashboard/MasterProduct/PriceManagement"
+import ProductSaleReport from "./screens/Dashboard/Report/ProductSale";
+import StoreSaleReport from "./screens/Dashboard/Report/StoreSale";
 
 const App = (): ReactElement => {
 return (
@@ -29,8 +32,11 @@ return (
    <Route path="/order/shipped" element={<ShippedOrder/>} ></Route>
    <Route path="/order/stored" element={<StoredOrder/>} ></Route>
    <Route path="/order/abnormal" element={<AbnormalOrder/>}></Route>
-   <Route path="/order/settings" element={<OrderSetting/>}></Route>
+   <Route path="/product/settings" element={<OrderSetting/>}></Route>
    <Route path="/master/product-list" element={<MasterProductList/>} />
+   <Route path="/master/price-management" element={<MPPriceManagement/>}></Route>
+   <Route path="/report/product-sales" element={<ProductSaleReport/>}></Route>
+   <Route path="/report/store-sales" element={<StoreSaleReport/>}></Route>
   </Routes>
 </BrowserRouter>
 </>

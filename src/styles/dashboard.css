@@ -381,3 +381,141 @@ html {
 }
 
 /* ======== End Order settings page css  ====== */
+
+/* ======= price management css ======= */
+.empty_table_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--bg);
+}
+/* ======= End price management css ===== */
+
+/* ======== Product sales report css ======== */
+.ps_sale_wraper{
+    background-color: var(--bg);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.ps_select_input{
+    display: flex;
+    margin-left: 7px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+.ps_select_input select{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 7px;
+    font-size: 14px;
+}
+.ps_select_input input{
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    width: 100%;
+    font-size: 14px;
+}
+.ps_select_input svg{
+    font-size: 20px;
+}
+
+.ps_date_input{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.ps_date_input input{
+    width: 100%;
+    color: #333;
+    border: none;
+    outline: none;
+}
+.ps_date_input svg{
+    color: #333;
+}
+.ps_dropdown_select{
+    width: 100%;
+}
+.ps_dropdown_select select{
+    font-size: 14px;
+}
+.ps_dasitem_wraper{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 90%;
+    background-color: var(--bg);
+}
+@media(max-width: 1000px){
+    .ps_dasitem_wraper{
+        width: 100%;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+@media(max-width: 800px){
+    .ps_dasitem_wraper{
+        width: 100%;
+        grid-template-columns: 50% 50%;
+    }
+}
+@media(max-width: 600px){
+    .ps_dasitem_wraper{
+        width: 100%;
+        grid-template-columns: 80%;
+    }
+}
+.ps_dasitem{
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.075);
+    border-radius: 3px;
+}
+.ps_dasitem_infobtn{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+.ps_dasitem_infobtn:hover{
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+.ps_dasitem_one{
+    border-left: 4px solid #5842df;
+}
+.ps_dasitem_two{
+    border-left: 4px solid #ce2518;
+}
+.ps_dasitem_three{
+    border-left: 4px solid #178be7;
+}
+.ps_dasitem_four{
+    border-left: 4px solid #5842df;
+}
+.ps_dasitem_five{
+    border-left: 4px solid #e5ae09;
+}
+@media(max-width: 600px){
+    .ps_sm_col{
+        flex-direction: column;
+        width: 100%;
+    }
+    .ps_sm_col span{
+        margin-bottom: 7px;
+    }
+}
+
+/* ======== End Product sales report css ====== */

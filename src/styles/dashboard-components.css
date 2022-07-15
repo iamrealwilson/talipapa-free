@@ -264,6 +264,7 @@
     min-width: 1200px;
 }
 
+
 /* end pending table css */
 
 /* filter box design css */
@@ -555,6 +556,11 @@
 .mp_grid_wraper{
     display: flex;
 }
+@media(max-width: 1000px){
+    .mp_grid_wraper{
+        flex-direction: column;
+    }
+}
 .mpi_btn{
     display: flex;
     align-items: center;
@@ -564,6 +570,14 @@
     border-radius: 3px;
     font-size: 13px;
     color: #ffffff;
+}
+.mpi_btn:hover{
+    cursor: pointer;
+    background-color: #4b14dc;
+}
+.mpi_btn_icon svg{
+    font-size: 16px;
+    margin-right: 5px;
 }
 .mpi_btn.lite{
     display: flex;
@@ -597,6 +611,8 @@
 }
 .mp_product_table{
     height: auto;
+    width: 100%;
+    overflow: auto;
 }
 .mppt_header{
     padding: 0px 20px;
@@ -608,6 +624,7 @@
     display: flex;
     align-items: center;
     padding: 15px 10px;
+    cursor: pointer;
 }
 .mppt_tab_btn span{
     font-size: 14px;
@@ -634,6 +651,18 @@
 .mppt_tab_btn.active .mppt_btn_sub{
     background-color: #5a23ff;
     color: #ffffff;
+}
+
+@media(max-width: 1000px){
+    .flex_md_col{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .md_d_one{
+        display: none;
+    }
 }
 
 /* end master product warning */
