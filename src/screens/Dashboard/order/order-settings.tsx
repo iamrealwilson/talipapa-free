@@ -16,8 +16,9 @@ return(
 <div className="order_setting_wraper">
 <DashboardHeader pagename="Order Settings"/>
 
+<div className="product_setting_wraper">
 <div className="relative">
-<div className="order_settings">
+<div className="order_settings scrollbar_one">
 
 
   <div className="order_setting_item rounded">
@@ -101,6 +102,42 @@ return(
 
 
 </div>
+</div>
+
+<div className="py-5 ml-3">
+<div className="product_setting_nav_wraper">
+  <div className={`psn_item ${cuBox==='binfo'?'active':""}`}
+  onClick={e=>setCuBox('binfo')}>
+    <div className="psn_item_dot"></div>
+    <div className="psn_item_text px-5">Basic Information</div>
+  </div>
+
+  <div className={`psn_item ${cuBox==='pinfo'?'active':''}`}
+  onClick={e=>setCuBox('pinfo')}>
+    <div className="psn_item_dot"></div>
+    <div className="psn_item_text px-5">Product Information</div>
+  </div>
+
+  <div className={`psn_item ${cuBox==='minfo'?'active':""}`}
+  onClick={e=>setCuBox('minfo')}>
+    <div className="psn_item_dot"></div>
+    <div className="psn_item_text px-5">Media Settings</div>
+  </div>
+
+  <div className={`psn_item ${cuBox==='dinfo'?'active':""}`}
+  onClick={e=>setCuBox('dinfo')}>
+    <div className="psn_item_dot"></div>
+    <div className="psn_item_text px-5">Delivery</div>
+  </div>
+
+  <div className={`psn_item ${cuBox==='cinfo'?'active':""}`}
+  onClick={e=>setCuBox('cinfo')}>
+    <div className="psn_item_dot"></div>
+    <div className="psn_item_text px-5">Cost Information</div>
+  </div>
+</div>
+</div>
+
 </div>
 
 </div>

@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import DashboardHeader from "../layout/header";
 import MPwarning from "./warning";
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,8 +9,12 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import InfoIcon from '@mui/icons-material/Info';
 import ProductListTable from "./tables/ProductListTable";
 import { Link } from "react-router-dom"
+import ProductFilter from "./Filter";
 
 const MasterProductList=():ReactElement =>{
+const [Filter,setFilter] = useState(true)
+
+const [FilterSearch,setFilterSearch] = useState(true)
 
 const OptionsOne = [
     { value: 'Store without sales', label: 'Store without sales' },
@@ -38,6 +42,10 @@ const filterOptions = [
     { value: 'Temporary untracked' , label: 'Temporary untracked' },
 ]
 
+function CloseFilter(){
+  setFilter(false)
+}
+
 return(
 <>
 <DashboardHeader pagename="master product list" />
@@ -45,6 +53,7 @@ return(
 <MPwarning/>
 
 <div className="px-3 mp_grid_wraper">
+
 
 <div className="p-1">
   <div className="mp_select_input">
@@ -90,7 +99,7 @@ return(
 <div className="mt-3 px-2 flex items-center flex_md_col">
    <div className="w-64 p-2 text-xs"><Select options={filterOptions}></Select></div>
    <button className="mpi_btn ml-2 m-1">Search</button>
-   <button className="mpi_btn ml-2 m-1 lite"> <span className="mr-1"><FilterListIcon/></span>Filter</button>
+   <button className="mpi_btn ml-2 m-1 lite" onClick={e=>setFilter(true)}> <span className="mr-1"><FilterListIcon/></span>Filter</button>
 </div>
 
 <div className="my-3 px-3">
@@ -113,6 +122,8 @@ return(
 </div>
 
 <ProductListTable/>
+
+{Filter?<ProductFilter close={CloseFilter}/>:null}
 
 </>
 )

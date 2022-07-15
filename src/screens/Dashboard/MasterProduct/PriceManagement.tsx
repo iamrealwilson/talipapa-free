@@ -7,13 +7,19 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import PriceManagementTable from "./tables/PriceManagementTeable";
 import CloseIcon from '@mui/icons-material/Close';
 import SyncIcon from '@mui/icons-material/Sync';
+import ProductFilter from "./Filter";
 
 const MPPriceManagement=():ReactElement =>{
 const [warning,setWarning] = useState(true)
+const [Filter,setFilter] = useState(false)
 
 const inputOptions = [
     { value: 'Import/Export', label: 'Import/Export' },
 ];
+
+function CloseFilter(){
+   setFilter(false)
+}
 
 return(
 <>
@@ -65,7 +71,7 @@ return(
        />
     </div>
    <button className="mpi_btn mr-2 m-1">Search</button>
-   <button className="mpi_btn lite m-1"> <span className="mr-1"><FilterListIcon/></span>Filter</button>
+   <button className="mpi_btn lite m-1" onClick={e=>setFilter(true)}> <span className="mr-1"><FilterListIcon/></span>Filter</button>
 </div>
 
 <div className="p-1 flex ml-auto items-center flex_md_col lg:justify-end text-xs col-span-3">
@@ -85,7 +91,7 @@ return(
 </div>
 
 <PriceManagementTable/>
-
+{Filter?<ProductFilter close={CloseFilter}/>:null}
 </>
 )
 }
