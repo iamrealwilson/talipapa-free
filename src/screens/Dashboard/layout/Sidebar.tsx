@@ -105,12 +105,12 @@ return(
         type:"menu",
         name:"Sales Report",
         links: [
-          {name:"Order Report",to:"/report/order-report"},
-          {name:"Master Product Sales",to:"/"},
-          {name:"Master Product Activity",to:"/"},
+          {name:"Order Report",to:"/report/store-sales"},
+          {name:"Master Product Sales",to:"/report/store-sales"},
+          {name:"Master Product Activity",to:"/report/store-sales"},
           {name:"Product Sales",to:"/report/product-sales"},
-          {name:"Variants Sales",to:""},
-          {name:"Channel Sales",to:"/"},
+          {name:"Variants Sales",to:"/report/store-sales"},
+          {name:"Channel Sales",to:"/report/store-sales"},
           {name:"Store Sales",to:"/report/store-sales"}
         ]
       },
